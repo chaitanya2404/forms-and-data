@@ -19,7 +19,10 @@ import {
 
 const COOKIE_NAME = "sr-form-state";
 const COOKIE_PATH = "/projects/service-request";
-const COOKIE_MAX_AGE = 60 * 60 * 4; // 4 hours
+// Session cookie (no maxAge): the form state lasts only as long as the
+// browser session. A fresh visitor never inherits a previous demo session's
+// in-progress state, but a same-session refresh / step navigation still
+// resumes correctly. Mid-session resets go through the "Start over" button.
 
 export type ServerState =
   | {
@@ -66,7 +69,7 @@ export async function writeServerState(state: ServerState): Promise<void> {
   store.set(COOKIE_NAME, encodeURIComponent(JSON.stringify(state)), {
     sameSite: "lax",
     path: COOKIE_PATH,
-    maxAge: COOKIE_MAX_AGE,
+    // No maxAge — session cookie. See note above the constants.
   });
 }
 
