@@ -58,7 +58,7 @@ export default function Home() {
             <BarChart3 className="h-8 w-8 text-blue-700" aria-hidden="true" />
             <h3 className="mt-4 text-xl font-semibold text-gray-900">
               <Link
-                href="/projects/dashboard"
+                href="/projects/analytics"
                 className="text-blue-800 hover:underline"
               >
                 Analytics dashboard
@@ -71,7 +71,7 @@ export default function Home() {
             </p>
             <p className="mt-4">
               <Link
-                href="/projects/dashboard"
+                href="/projects/analytics"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-blue-800 hover:underline"
               >
                 Open the analytics dashboard

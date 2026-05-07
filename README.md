@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Accessible Portfolio — Forms and Data
 
-## Getting Started
+A small Next.js portfolio centered on the parts of web apps users most often
+struggle with: long forms and dense dashboards. Accessibility is the
+differentiator, not an afterthought — every page is built to work for keyboard
+users and screen-reader users from the start.
 
-First, run the development server:
+## Projects
+
+- **[Service request form](/projects/service-request)** — a three-step form
+  with inline validation, an error summary that takes focus on failed submit,
+  managed focus between steps, a screen-reader-friendly file input, and a
+  confirmation page with a fake request ID.
+- **[Analytics dashboard](/projects/analytics)** — a read-only dashboard with
+  Radix-based filters, three KPI cards, and three Recharts visualisations
+  (line, bar, pie). Each chart includes a plain-English summary, a
+  visually-hidden data table fallback, and a `role="img"` wrapper with a
+  descriptive `aria-label`. Filter changes are announced via an `aria-live`
+  region.
+
+## Stack
+
+Next.js 16 (App Router) · TypeScript · Tailwind CSS v4 · Radix UI primitives
+(`react-radio-group`, `react-select`, `react-progress`) · Recharts ·
+`lucide-react` · `clsx` · plain `useState` for state.
+
+No data fetching, no auth, no backend — both projects use hardcoded data and
+local component state.
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Accessibility
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tested with NVDA, Lighthouse, and axe-core. Targets WCAG 2.1 AA.

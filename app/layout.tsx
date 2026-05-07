@@ -53,6 +53,14 @@ export default function RootLayout({
                   Service request
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/projects/analytics"
+                  className="font-medium text-gray-700 hover:text-blue-800 hover:underline"
+                >
+                  Analytics
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
