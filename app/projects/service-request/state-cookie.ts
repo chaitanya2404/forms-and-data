@@ -75,5 +75,12 @@ export async function writeServerState(state: ServerState): Promise<void> {
 
 export async function clearServerState(): Promise<void> {
   const store = await cookies();
-  store.delete(COOKIE_NAME);
+  // The cookie was set with `path: COOKIE_PATH`, so the delete must specify
+  // the same path to match. `cookies().delete(name)` defaults to path "/" and
+  // silently no-ops against path-scoped cookies.
+  store.set(COOKIE_NAME, "", {
+    sameSite: "lax",
+    path: COOKIE_PATH,
+    maxAge: 0,
+  });
 }

@@ -47,7 +47,14 @@ export function Step3Form({ data }: { data: FormData }) {
     void step;
   }
 
-  function handleSubmit() {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // Don't fire optimistic UI / draft-clear when the user is going Back —
+    // only when the actual Submit button is the submitter.
+    const submitter = (e.nativeEvent as SubmitEvent).submitter as
+      | HTMLButtonElement
+      | null;
+    if (submitter?.formNoValidate) return;
+
     const num = Math.floor(Math.random() * 90000) + 10000;
     setOptimistic(`SR-2026-${num}`);
     // We can't know if the submit succeeded here (server redirects) — but

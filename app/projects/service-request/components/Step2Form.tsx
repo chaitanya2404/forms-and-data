@@ -91,6 +91,14 @@ export function Step2Form({
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // Skip client-side validation when the submitter opts out via
+    // `formNoValidate` (Back button). Otherwise blocking the form on
+    // validation errors would also block navigating away.
+    const submitter = (e.nativeEvent as SubmitEvent).submitter as
+      | HTMLButtonElement
+      | null;
+    if (submitter?.formNoValidate) return;
+
     const next = validateStep(2, data);
     if (next.length > 0) {
       e.preventDefault();
