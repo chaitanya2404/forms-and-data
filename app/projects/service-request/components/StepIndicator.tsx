@@ -23,8 +23,8 @@ export function StepIndicator({ step }: { step: StepId }) {
                 aria-hidden="true"
                 className={clsx(
                   "flex h-8 w-8 items-center justify-center rounded-full border-2 text-xs font-semibold",
-                  isCurrent && "border-blue-700 bg-blue-700 text-white",
-                  isComplete && "border-blue-700 bg-white text-blue-700",
+                  isCurrent && "border-orange-700 bg-orange-700 text-white",
+                  isComplete && "border-orange-700 bg-white text-orange-700",
                   !isCurrent &&
                     !isComplete &&
                     "border-gray-300 bg-white text-gray-700",
@@ -40,7 +40,7 @@ export function StepIndicator({ step }: { step: StepId }) {
                 className={clsx(
                   "font-medium",
                   isCurrent || isComplete
-                    ? "text-blue-800"
+                    ? "text-orange-800"
                     : "text-gray-700",
                 )}
               >
@@ -64,7 +64,7 @@ export function StepIndicator({ step }: { step: StepId }) {
         className="mt-4 h-2 w-full overflow-hidden rounded-full bg-gray-200"
       >
         <Progress.Indicator
-          className="h-full bg-blue-700 transition-transform duration-300"
+          className="h-full bg-orange-700 transition-transform duration-300"
           style={{ transform: `translateX(-${100 - value}%)` }}
         />
       </Progress.Root>

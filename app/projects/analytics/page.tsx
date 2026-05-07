@@ -40,7 +40,7 @@ export default async function AnalyticsPage({
       <div className="mx-auto max-w-6xl px-6 py-10">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm font-medium text-blue-800 hover:underline"
+          className="inline-flex items-center gap-1 text-sm font-medium text-orange-800 hover:underline"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           Back to home

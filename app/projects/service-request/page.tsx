@@ -35,7 +35,7 @@ export default async function ServiceRequestPage() {
       <div className="mx-auto max-w-3xl px-6 py-10">
         <Link
           href="/"
-          className="inline-flex items-center gap-1 text-sm font-medium text-blue-800 hover:underline"
+          className="inline-flex items-center gap-1 text-sm font-medium text-orange-800 hover:underline"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           Back to home
@@ -49,7 +49,7 @@ export default async function ServiceRequestPage() {
           demo — no data is sent. Form works without JavaScript:{" "}
           <Link
             href="/projects/service-request/about"
-            className="text-blue-800 underline hover:text-blue-900"
+            className="text-orange-800 underline hover:text-orange-900"
           >
             see the WCAG conformance report
           </Link>

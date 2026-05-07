@@ -18,7 +18,7 @@ export function NextButton({ label = "Next" }: { label?: string }) {
       type="submit"
       disabled={pending}
       aria-busy={pending}
-      className="inline-flex items-center gap-2 rounded-md bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-80"
+      className="inline-flex items-center gap-2 rounded-md bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-800 disabled:cursor-not-allowed disabled:opacity-80"
     >
       {pending ? (
         <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
@@ -37,7 +37,7 @@ export function SubmitButton() {
       disabled={pending}
       aria-busy={pending}
       formAction={submitRequest}
-      className="inline-flex items-center gap-2 rounded-md bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-80"
+      className="inline-flex items-center gap-2 rounded-md bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-800 disabled:cursor-not-allowed disabled:opacity-80"
     >
       {pending ? (
         <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />

@@ -48,7 +48,7 @@ export function FileInput({
         htmlFor="attachment"
         className={clsx(
           "mt-2 inline-flex cursor-pointer items-center gap-2 rounded-md border-2 border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50",
-          "has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-blue-700",
+          "has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-700",
         )}
       >
         <Paperclip className="h-4 w-4" aria-hidden="true" />

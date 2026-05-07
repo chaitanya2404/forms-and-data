@@ -1,22 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #111827;
-}
+/* Editorial Mono / Paper palette — matches the parent portfolio at
+   accessibility-portfolio.vercel.app. Warm off-white background, dark ink,
+   burnt-orange accent. JetBrains Mono everywhere; no body sans-serif. */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: #f3efe8;
+  --color-paper2: #ebe5da;
+  --color-ink: #1a1916;
+  --color-ink2: #5a564f;
+  --color-ink3: #8a8478;
+  --color-rule: #d8d2c4;
+  --color-accent: #c2410c;
+  --color-accent-ink: #fef7f0;
+  --font-mono: var(--font-jetbrains-mono);
+  --font-sans: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI",
-    Arial, sans-serif;
+  background: #f3efe8;
+  color: #1a1916;
+  font-family: var(--font-jetbrains-mono), ui-monospace, "JetBrains Mono",
+    "IBM Plex Mono", monospace;
+  font-feature-settings: "ss01", "ss02";
+}
+
+::selection {
+  background: #c2410c;
+  color: #fef7f0;
 }
 
 *:focus {
@@ -24,7 +35,7 @@ body {
 }
 
 *:focus-visible {
-  outline: 2px solid #1d4ed8;
+  outline: 2px solid #c2410c;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -36,6 +47,12 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid #1d4ed8;
+  outline: 2px solid #c2410c;
   outline-offset: 2px;
+}
+
+/* Subtle pulse used by the availability indicator in the home hero. */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
 }

@@ -141,10 +141,10 @@ export function Step1Form({
                 htmlFor={inputId}
                 className={clsx(
                   "flex cursor-pointer items-start gap-3 rounded-md border-2 p-4 transition-colors",
-                  "has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-blue-700",
+                  "has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-orange-700",
                   isSelected
-                    ? "border-blue-700 bg-blue-50"
-                    : "border-gray-300 bg-white hover:border-blue-400",
+                    ? "border-orange-700 bg-orange-50"
+                    : "border-gray-300 bg-white hover:border-orange-400",
                 )}
               >
                 <input
@@ -156,7 +156,7 @@ export function Step1Form({
                   onChange={() =>
                     handleChange(rt.value as FormData["requestType"])
                   }
-                  className="mt-1 h-4 w-4 shrink-0 accent-blue-700"
+                  className="mt-1 h-4 w-4 shrink-0 accent-orange-700"
                 />
                 <span>
                   <span className="block font-semibold text-gray-900">

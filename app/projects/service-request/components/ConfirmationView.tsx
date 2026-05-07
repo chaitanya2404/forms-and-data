@@ -39,7 +39,7 @@ export function ConfirmationView({
     <div className="mx-auto max-w-3xl px-6 py-10">
       <Link
         href="/"
-        className="inline-flex items-center gap-1 text-sm font-medium text-blue-800 hover:underline"
+        className="inline-flex items-center gap-1 text-sm font-medium text-orange-800 hover:underline"
       >
         <ArrowLeft className="h-4 w-4" aria-hidden="true" />
         Back to home
@@ -105,7 +105,7 @@ export function ConfirmationView({
       <form action={resetForm}>
         <button
           type="submit"
-          className="mt-8 inline-flex items-center gap-2 rounded-md bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+          className="mt-8 inline-flex items-center gap-2 rounded-md bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-orange-800"
         >
           Submit another request
         </button>

@@ -32,7 +32,7 @@ export function ErrorSummary({
       aria-live="assertive"
       ref={ref}
       tabIndex={-1}
-      className="mt-8 rounded-md border-2 border-red-700 bg-red-50 p-4 focus-visible:outline-2 focus-visible:outline-blue-700"
+      className="mt-8 rounded-md border-2 border-red-700 bg-red-50 p-4 focus-visible:outline-2 focus-visible:outline-orange-700"
     >
       <h2 className="text-base font-semibold text-red-800">
         Please fix {errors.length} error{errors.length === 1 ? "" : "s"} before

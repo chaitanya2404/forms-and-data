@@ -125,11 +125,11 @@ export function FiltersBar({ filters }: { filters: Filters }) {
                     <Select.Item
                       key={o.value}
                       value={o.value}
-                      className="relative flex cursor-pointer select-none items-center gap-2 rounded px-3 py-2 text-base text-gray-900 data-[highlighted]:bg-blue-100 data-[highlighted]:text-blue-900 data-[highlighted]:outline-none"
+                      className="relative flex cursor-pointer select-none items-center gap-2 rounded px-3 py-2 text-base text-gray-900 data-[highlighted]:bg-orange-100 data-[highlighted]:text-orange-900 data-[highlighted]:outline-none"
                     >
                       <Select.ItemIndicator>
                         <Check
-                          className="h-4 w-4 text-blue-700"
+                          className="h-4 w-4 text-orange-700"
                           aria-hidden="true"
                         />
                       </Select.ItemIndicator>
@@ -165,14 +165,14 @@ export function FiltersBar({ filters }: { filters: Filters }) {
                     className={clsx(
                       "inline-flex cursor-pointer items-center gap-2 rounded-md border-2 px-3 py-2 text-sm font-medium",
                       isSelected
-                        ? "border-blue-700 bg-blue-50 text-blue-800"
-                        : "border-gray-300 bg-white text-gray-900 hover:border-blue-400",
+                        ? "border-orange-700 bg-orange-50 text-orange-800"
+                        : "border-gray-300 bg-white text-gray-900 hover:border-orange-400",
                     )}
                   >
                     <RadioGroup.Item
                       id={inputId}
                       value={String(o.value)}
-                      className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-gray-500 bg-white data-[state=checked]:border-blue-700 data-[state=checked]:bg-blue-700"
+                      className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-gray-500 bg-white data-[state=checked]:border-orange-700 data-[state=checked]:bg-orange-700"
                     >
                       <RadioGroup.Indicator className="block h-1.5 w-1.5 rounded-full bg-white" />
                     </RadioGroup.Item>

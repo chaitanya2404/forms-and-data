@@ -138,7 +138,7 @@ export function Step3Form({ data }: { data: FormData }) {
                 />
                 <button
                   type="submit"
-                  className="text-sm font-semibold text-blue-800 underline hover:text-blue-900"
+                  className="text-sm font-semibold text-orange-800 underline hover:text-orange-900"
                 >
                   Edit
                   <span className="sr-only"> {row.label.toLowerCase()}</span>
@@ -152,7 +152,7 @@ export function Step3Form({ data }: { data: FormData }) {
           <div
             role="status"
             aria-live="polite"
-            className="mt-6 rounded-md border-2 border-blue-200 bg-blue-50 p-4 text-sm text-blue-900"
+            className="mt-6 rounded-md border-2 border-orange-200 bg-orange-50 p-4 text-sm text-orange-900"
           >
             Submitting your request… we&apos;ve reserved reference{" "}
             <span className="font-mono font-semibold">{optimistic}</span> and

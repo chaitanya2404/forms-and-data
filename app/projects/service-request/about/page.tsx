@@ -30,7 +30,7 @@ const ITEMS: Item[] = [
     name: "Contrast (Minimum)",
     status: "pass",
     evidence:
-      "Body text uses gray-900 on white and the primary action uses white on blue-700, both at 4.5:1 or better. Error text uses red-700 on red-50 at 4.5:1 or better. Verified with axe DevTools.",
+      "Body text uses gray-900 on white and the primary action uses white on orange-700, both at 4.5:1 or better. Error text uses red-700 on red-50 at 4.5:1 or better. Verified with axe DevTools.",
   },
   {
     sc: "2.1.1",
@@ -62,7 +62,7 @@ const ITEMS: Item[] = [
     name: "Focus Visible",
     status: "pass",
     evidence:
-      "Global *:focus-visible style in globals.css renders a 2px blue-700 outline with offset on every focusable element.",
+      "Global *:focus-visible style in globals.css renders a 2px orange-700 outline with offset on every focusable element.",
   },
   {
     sc: "3.2.2",
@@ -130,7 +130,7 @@ export default function AboutPage() {
     <div className="mx-auto max-w-4xl px-6 py-10">
       <Link
         href="/projects/service-request"
-        className="inline-flex items-center gap-1 text-sm font-medium text-blue-800 hover:underline"
+        className="inline-flex items-center gap-1 text-sm font-medium text-orange-800 hover:underline"
       >
         <ArrowLeft className="h-4 w-4" aria-hidden="true" />
         Back to the form

@@ -50,7 +50,7 @@ export function KpiCards({ filters }: { filters: Filters }) {
           aria-label={`Total page views: ${formatNumber(total)} over last ${filters.range} months`}
         >
           <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
-            <Eye className="h-4 w-4 text-blue-700" aria-hidden="true" />
+            <Eye className="h-4 w-4 text-orange-700" aria-hidden="true" />
             <h3>Total page views</h3>
           </div>
           <p className="mt-2 text-3xl font-bold text-gray-900">
@@ -65,7 +65,7 @@ export function KpiCards({ filters }: { filters: Filters }) {
           aria-label={`Top department: ${top.department} with ${formatNumber(top.views)} page views`}
         >
           <div className="flex items-center gap-2 text-sm font-medium text-gray-600">
-            <Users className="h-4 w-4 text-blue-700" aria-hidden="true" />
+            <Users className="h-4 w-4 text-orange-700" aria-hidden="true" />
             <h3>Top department</h3>
           </div>
           <p className="mt-2 text-3xl font-bold text-gray-900">
